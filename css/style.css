@@ -1,0 +1,72 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    margin: 1440 px;
+    margin: auto;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1480px;
+    margin: auto;
+    margin-top:20px;
+  }
+  .logo img {
+  height: 45px;
+  }
+  .logo{
+    padding:0px 10px;
+  
+    margin-left:20px;
+  }
+  .links {
+    margin: 15px 40px;
+   
+  }
+  .links a {
+    margin: 0 15px 0 15px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #0065fc;
+    text-decoration: none;
+   padding:32px;
+    border-top: 3px #0065fc solid;
+    
+  }
+  .links a:hover {
+    border-top: 3px #0065fc solid;
+    padding:32px;
+    
+  }
+  #activity {
+    margin: 0 15px 0 15px;
+    color: black;
+    border-top: transparent;
+    padding:32px;
+  }
+  #activity:hover {
+    border-top: 3px #0065fc solid;
+    padding:32px;
+    color:#0065fc ;
+  }
+  section {
+    margin: 50px 40px;
+  
+  }
+  .slogan {
+    line-height: 15px;
+    margin-bottom: 30px;
+  }
+  .slogan h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .slogan h2 {
+    font-weight: 400;
+    font-size: 16px;
+    
+  }
