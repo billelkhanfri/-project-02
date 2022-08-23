@@ -3,6 +3,12 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  :root{
+    --primary:#0065fc;
+    --secondary:#f2f2f2;
+    
+
+  }
   body  {
     font-family: 'Raleway', sans-serif;
     /* max-width: 1440px;
@@ -28,9 +34,9 @@
     padding:32px; 
   }
   .links a:hover {
-    border-top: 3px #0065fc solid;
+    border-top: 3px var(--primary);
     padding:32px;
-    color: #0065fc; 
+    color: var(--primary);
   }
   section {
     margin: 50px 0;
@@ -45,3 +51,26 @@
     font-size: 24px;
     font-weight: 500;
   }
+  .search-section{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr; 
+  width: 100px;
+  }
+  i{
+    background-color: var(--secondary);
+    padding: 16px 20px;
+    border-radius: 16px 0 0 16px;
+    text-align: center;
+  }
+  .search-bar {
+  border-top: 1px var(--secondary) solid ;
+  border-bottom: 1px var(--secondary) solid ; 
+  border-left: none;
+  border-right: none;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+  
