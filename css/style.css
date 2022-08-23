@@ -5,15 +5,15 @@
   }
   body {
     font-family: 'Raleway', sans-serif;
-    max-width: 1440px;
-    margin: auto;
+    /* max-width: 1440px;
+    margin: auto; */
   }
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1240px;
-    margin: auto;
+    /* width: 1240px;
+    margin: auto; */
     margin-top: 20px;
   }
   .logo img {
