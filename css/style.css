@@ -6,24 +6,22 @@
   :root{
     --primary:#0065fc;
     --secondary:#f2f2f2;
-    
-
   }
   body  {
     font-family: 'Raleway', sans-serif;
-    /* max-width: 1440px;
-    margin: auto; */
+    max-width: 1440px;
+    margin: 10px 30px;
+   
   }
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 1240px;
-    margin: auto; */
     margin-top: 20px;
   }
   .logo img {
   height: 45px;
+  margin-left:20px;
   }
   .links a {
     margin: 0 0 0 0;
@@ -39,17 +37,15 @@
     color: var(--primary);
   }
   section {
-    margin: 50px 0;
-    width: 1240px;
-    margin: auto;
+    margin: 30px 30px;
   }
   .slogan {
     line-height: 15px;
     margin-bottom: 30px;
   }
   .slogan h1 {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 600;
   }
   .search-section{
   display:grid;
@@ -57,9 +53,9 @@
   grid-template-rows: 1fr; 
   width: 100px;
   }
-  i{
+  .search-section i{
     background-color: var(--secondary);
-    padding: 16px 20px;
+    padding: 18px 20px;
     border-radius: 16px 0 0 16px;
     text-align: center;
   }
@@ -68,9 +64,67 @@
   border-bottom: 1px var(--secondary) solid ; 
   border-left: none;
   border-right: none;
-  width: 200px;
-  font-size: 16px;
+  width: 240px;
+  font-size: 18px;
+  color: black;
   font-weight: 600;
-  padding-left: 10px;
+  padding-left: 20px;
+}.search{
+width: 128px;
+color: white;
+background-color: var(--primary);
+border-radius: 0 16px 16px 0;
+border: #0065fc solid;
+font-size: 18px;
+font-weight: 600;
 }
+.search:hover{
+  cursor: pointer;
+  opacity:0.9;
+}
+.search-bar:focus{
+  outline:none;
+}
+.search-bar:focus::-webkit-input-placeholder{
+  opacity:0;
+ -webkit-transition:opacity .4s ease-in-out; 
+ -moz-transition: opacity .4s ease-in-out ;
+ -o-transition: opacity .4s ease-in-out;
+ transition: opacity .4s ease-in-out;
+}
+ .search-bar::placeholder{
+  color: black;
+  font-weight: 700;
+}
+.filtres{
+  display: flex; 
+  gap:25px;
+}
+ .filtre-box{
+  display: flex; 
+  align-items: center; 
+  border: 2px solid #d9d9d9;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.filtre-box span{
+  font-weight: 700;
+  padding:0 16px;
+  font-size: 18px;
+}
+.filtre-box i{
+  color:var(--primary);
+  padding:16px;
+  background-color:#DEEBFF;
+  border-radius: 100%;
+  font-size: 20px;
+  margin-left:-2px;
+  margin-top:-2px;
   
+}
+.filtres h2{
+  font-size: 18px;
+}
+.fa-solid .fa-money-bill-wave {
+  font-size:50px;
+}
