@@ -10,8 +10,6 @@
   body  {
     font-family: 'Raleway', sans-serif;
     max-width: 1440px;
-    margin: 10px 30px;
-   
   }
   nav {
     display: flex;
@@ -37,7 +35,7 @@
     color: var(--primary);
   }
   section {
-    margin: 30px 30px;
+    margin: 30px 30px; 
   }
   .slogan {
     line-height: 15px;
@@ -45,7 +43,7 @@
   }
   .slogan h1 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 700;
   }
   .search-section{
   display:grid;
@@ -86,13 +84,13 @@ font-weight: 600;
   outline:none;
 }
 .search-bar:focus::-webkit-input-placeholder{
-  opacity:0;
- -webkit-transition:opacity .4s ease-in-out; 
- -moz-transition: opacity .4s ease-in-out ;
- -o-transition: opacity .4s ease-in-out;
- transition: opacity .4s ease-in-out;
+opacity:0;
+-webkit-transition:opacity .4s ease-in-out; 
+-moz-transition: opacity .4s ease-in-out ;
+-o-transition: opacity .4s ease-in-out;
+transition: opacity .4s ease-in-out;
 }
- .search-bar::placeholder{
+.search-bar::placeholder{
   color: black;
   font-weight: 700;
 }
@@ -100,7 +98,7 @@ font-weight: 600;
   display: flex; 
   gap:25px;
 }
- .filtre-box{
+.filtre-box{
   display: flex; 
   align-items: center; 
   border: 2px solid #d9d9d9;
@@ -120,7 +118,6 @@ font-weight: 600;
   font-size: 20px;
   margin-left:-2px;
   margin-top:-2px;
-  
 }
 .filtres h2{
   font-size: 18px;
@@ -146,4 +143,28 @@ font-weight: 600;
   padding: 4px;
   margin-right: 10px;
 }
- 
+.hotels{
+  /* border: 2px solid; */
+
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 2%;
+  
+}
+.hebergement{
+  grid-row: 1;
+  grid-column: 1;
+  width: calc(132%);
+ background-color: #f2f2f2;
+ border-radius: 24px;
+}
+.populaire{
+  grid-row: 1;
+  grid-column: 2;
+  width: calc(66%);
+  margin-left: auto;
+  background-color: #f2f2f2;
+  border-radius: 24px;
+}
