@@ -128,3 +128,22 @@ font-weight: 600;
 .fa-solid .fa-money-bill-wave {
   font-size:50px;
 }
+.information{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.information i{
+  color:var(--primary);
+  background-color: white;
+  font-size: 12px;
+  font-weight: bolder;
+  width: 22px;
+  height: 22px;
+  border: 1px #d9d9d9 solid;
+  border-radius: 50%;
+  text-align: center;
+  padding: 4px;
+  margin-right: 10px;
+}
+ 
