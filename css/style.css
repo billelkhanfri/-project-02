@@ -10,6 +10,7 @@
   body  {
     font-family: 'Raleway', sans-serif;
     max-width: 1440px;
+    margin: auto;
   }
   nav {
     display: flex;
@@ -112,6 +113,10 @@
   border: 2px solid #d9d9d9;
   border-radius: 3rem;
   cursor: pointer;
+  transition: 0.2s;
+}
+.filtre-box:hover{
+  transform: scale(1.2);
 }
 .filtre-box span{
   font-weight: 700;
@@ -208,6 +213,7 @@ text-decoration: none;
 font-weight: bold;
 color: black;
 font-size: 18px;
+margin-top:-10px;
 }
 .card-1 {
 grid-column: 1;
