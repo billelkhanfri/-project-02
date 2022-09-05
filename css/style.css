@@ -14,7 +14,6 @@
   body  {
     font-family: 'Raleway', sans-serif;
     max-width: 1440px;
-    border: solid;
   }
   nav {
     display: flex;
@@ -452,13 +451,20 @@ ul {
     max-width: 1320px;
   } 
 .hotels{
-  display: block;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
 }
  .hebergement-cards{
+  grid-column: 1;
+  grid-row: 1;
   grid-template-columns: 1fr 1fr ;
   grid-template-rows: 1fr 1fr 1fr;
   height: 750px; 
-} 
+} aside{
+  grid-column: 2;
+  grid-row: 1;
+}
 .see-more {
 margin-top:-30px;
 }
@@ -591,6 +597,22 @@ footer {
   gap: 90px;  
 }
 }
+@media screen and (max-width:1000px) {
+  html{
+     max-width: 1000px;
+     margin: auto;
+   }
+   body  {
+     max-width: 1000px;
+   } 
+ .hotels{
+   display: block;
+ }
+  .hebergement-cards{
+   grid-template-columns: 1fr 1fr ;
+   grid-template-rows: 1fr 1fr 1fr;
+   height: 750px; }
+  }
 
 @media screen and (max-width: 375px){
  
