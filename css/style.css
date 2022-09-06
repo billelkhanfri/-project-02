@@ -1,4 +1,4 @@
- * {
+ *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -503,7 +503,6 @@ grid-row: 1;
 }
 .aside-cards{
   grid-template-columns: 1fr ;
-  grid-template-rows: 1fr fr 1fr;
   height: 600px; 
 }
 .populaire-title i{
@@ -530,7 +529,6 @@ grid-row: 1;
 .activities{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2fr);
   column-gap:32px;
   row-gap: 32px;
   
@@ -725,7 +723,6 @@ footer {
 .hebergement-cards{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6) ;
     row-gap: 10px; 
     margin: 0 15px
    }
