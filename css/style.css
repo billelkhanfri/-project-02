@@ -425,8 +425,8 @@ footer {
   display: flex;
   background: #f2f2f2;
   padding: 45px;
-  gap: 220px;
   width: 100%;
+  /* gap: 220px; flex gap not supported under safari 14 version */
 }
 footer h2 {
   font-size: 18px;
@@ -447,6 +447,7 @@ footer li a {
 }
 ul {
   padding-left: 0px;
+  margin-right: 220px;
 }
 @media screen and (max-width: 1320px) {
   html {
@@ -603,13 +604,14 @@ ul {
     gap: 90px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
   html {
-    max-width: 1000px;
+    max-width: 992px;
     margin: auto;
   }
   body {
-    max-width: 1000px;
+    max-width: 992px;
+    min-width: 768px;
   }
   .hotels {
     display: block;
@@ -619,9 +621,15 @@ ul {
     grid-template-rows: 1fr 1fr 1fr;
     height: 750px;
   }
+  footer {
+    width: 100%;
+  }
+  ul {
+    margin-right: 100px;
+  }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   html {
     max-width: 375px;
     margin: auto;
