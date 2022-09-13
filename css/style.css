@@ -79,7 +79,7 @@ form {
   padding-left: 20px;
 }
 .search {
-  width: 128px;
+  width: 134px;
   color: white;
   background-color: var(--primary);
   border-radius: 0 16px 16px 0;
@@ -665,7 +665,6 @@ ul {
     border-bottom: 3px var(--primary) solid;
     color: var(--primary);
     border-top: hidden;
-    display: none;
   }
   section {
     margin: 30px 20px;
