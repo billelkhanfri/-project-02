@@ -9,6 +9,7 @@
 }
 
 body {
+  max-width: 1440px;
   font-family: "Raleway", sans-serif;
   margin: 0;
 }
@@ -177,7 +178,7 @@ form {
 
 .hebergement__cards {
   display: flex;
-  margin: 32px;
+  margin: 16px;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 16px;
