@@ -224,6 +224,7 @@ h3 {
   color: black;
   font-size: 18px;
   margin-left: 32px;
+  margin-top: 40px;
 }
 .cards img {
   object-fit: cover;
@@ -270,7 +271,6 @@ i {
   border-radius: 20px;
   text-decoration: none;
   display: flex;
-  gap: 10px;
   transition: 0.2s;
   margin-bottom: 16px;
 }
