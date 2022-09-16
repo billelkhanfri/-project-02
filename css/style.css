@@ -7,13 +7,10 @@
   --primary: #0065fc;
   --secondary: #f2f2f2;
 }
-html {
-  max-width: 1440px;
-  margin: auto;
-}
+
 body {
-  font-family: "Raleway", sans-serif;
   max-width: 1440px;
+  font-family: "Raleway", sans-serif;
   margin: 0;
 }
 nav {
@@ -56,9 +53,7 @@ form {
   margin-top: 20px;
 }
 .search-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
   width: 100px;
 }
 .search-section i {
@@ -162,32 +157,33 @@ form {
   margin-right: 10px;
 }
 .hotels {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 32px;
+  display: flex;
+  gap: 2%;
 }
-.hebergement {
-  grid-column: 1;
+.hebergement__section {
   background-color: #f2f2f2;
   border-radius: 24px;
+  flex: 66%;
 }
+
 .side-bar {
-  grid-column: 2;
   background-color: #f2f2f2;
   border-radius: 24px;
   order: 2;
+  flex: 32%;
 }
 .hebergement-title {
   margin: 32px 32px 0px 32px;
 }
-.hebergement-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 32px;
-  row-gap: 32px;
-  height: 500px;
+
+.hebergement__cards {
+  display: flex;
+  margin: 16px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 16px;
 }
+
 section a {
   text-decoration: none;
   color: black;
@@ -199,6 +195,14 @@ section a {
   text-decoration: none;
   transition: 0.2s;
   box-shadow: 0 0 20px #0000002e;
+  width: 600px;
+  max-width: 30%;
+}
+.card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 16px;
 }
 .cards:hover {
   cursor: pointer;
@@ -209,54 +213,25 @@ h3 {
 }
 .cards p {
   margin: 4px 12px;
-  font-weight: 500;
-  font-size: 14px;
 }
-.hebergement-cards {
-  margin: 4px 32px;
-  font-weight: bold;
-}
+
 .see-more {
   text-decoration: none;
   font-weight: bold;
   color: black;
   font-size: 18px;
-  margin-top: -10px;
-}
-.card-1 {
-  grid-column: 1;
-  grid-row: 1;
-}
-.card-2 {
-  grid-column: 2;
-  grid-row: 1;
-}
-.card-3 {
-  grid-column: 3;
-  grid-row: 1;
-}
-.card-4 {
-  grid-column: 1;
-  grid-row: 2;
-}
-.card-5 {
-  grid-column: 2;
-  grid-row: 2;
-}
-.card-6 {
-  grid-column: 3;
-  grid-row: 2;
+  margin-left: 32px;
 }
 .cards img {
   object-fit: cover;
-  width: 241px;
+  width: 100%;
   height: 119px;
   border-radius: 16px 16px 0 0;
 }
 .cards .stars {
   margin-left: 12px;
 }
-.stars i {
+i {
   font-size: 12px;
   margin-left: -3px;
 }
@@ -266,37 +241,26 @@ h3 {
 .unchecked {
   color: #d9d9d9;
 }
+
 .aside-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  column-gap: 32px;
-  row-gap: 32px;
-  min-width: 0;
-  min-height: 0;
-  margin: 0 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 16px 16px 16px;
 }
+
 .populaire-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 32px 32px 0px 32px;
+  margin: 16px 32px 0px 32px;
 }
 .populaire-title i {
   font-size: 24px;
 }
 .side-bar h2 {
-  font-size: 22px;
+  margin-bottom: 32px;
 }
-.card-7 {
-  grid-row: 1;
-}
-.card-8 {
-  grid-row: 2;
-}
-.card-9 {
-  grid-row: 3;
-}
+
 .aside-card {
   background-color: white;
   padding: 5px;
@@ -305,14 +269,15 @@ h3 {
   display: flex;
   gap: 10px;
   transition: 0.2s;
+  margin-bottom: 16px;
 }
 .aside-card:hover {
   transform: scale(1.05);
 }
 .aside-card img {
   object-fit: cover;
-  width: 132px;
-  height: 139px;
+  width: 40%;
+
   border-radius: 16px 0 0 16px;
 }
 .aside-cards a {
@@ -330,12 +295,11 @@ h3 {
   margin: 5px 10px;
 }
 .aside-card .stars {
-  margin: 40px 0 10px 10px;
+  margin: 50px 0 10px 10px;
 }
 .activities {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 32px;
+  display: flex;
+  gap: 2%;
 }
 .activities a {
   transition: 0.2s;
@@ -343,62 +307,41 @@ h3 {
 .activities a:hover {
   transform: scale(1.05);
 }
-.activity-card-1 {
-  grid-column: 1;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #0000002e;
-  transition: 0.2s;
-}
-.activity-card-2 {
-  grid-column: 2;
-  border-radius: 20px;
-}
-.activity-card-3 {
-  grid-column: 3;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #0000002e;
-}
-.activity-card-4 {
-  grid-column: 4;
-}
+
 section > h2 {
   margin: 32px;
   font-size: 22px;
 }
+
 .activity-card-1 img,
 .activity-card-3 img {
   object-fit: cover;
-  width: 316px;
+  width: 100%;
   height: 378.6px;
   border-radius: 20px 20px 0 0;
 }
-.activity-card-2,
-.activity-card-4 {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
+
 .activity-card-2 .cards-fraction img {
   object-fit: cover;
-  width: 316px;
+  width: 100%;
   height: 179.53px;
   border-radius: 20px 20px 0 0;
 }
 .cards-fraction-2 img {
   object-fit: cover;
-  width: 316px;
+  width: 100%;
   height: 109.1px;
   border-radius: 20px 20px 0 0;
 }
 .activity-card-4 img {
   object-fit: cover;
-  width: 317px;
+  width: 100%;
   height: 196px;
   border-radius: 20px 20px 0 0;
 }
 .cards-fraction-4 img {
   object-fit: cover;
-  width: 317px;
+  width: 100%;
   height: 159.2px;
   border-radius: 20px 20px 0 0;
 }
@@ -411,11 +354,30 @@ section > h2 {
   border-radius: 20px;
   box-shadow: 0 0 20px #0000002e;
 }
+
+.activity-card-1 {
+  flex: 23%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0000002e;
+}
+.activity-card-3 {
+  flex: 48%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0000002e;
+}
+.activity-card-2,
+.activity-card-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 50%;
+}
 .activity-cards h3 {
   padding: 14px 6px;
   font-weight: 800;
   font-size: 18px;
 }
+
 #image-4 {
   height: 130.12px;
 }
@@ -448,177 +410,19 @@ ul {
   padding-left: 0px;
   margin-right: 220px;
 }
-/* @media screen and (max-width: 1320px) {
-  html {
-    max-width: 1320px;
-    margin: auto;
-  }
-  body {
-    max-width: 1320px;
-  }
-  .hotels {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1fr;
-  }
-  .hebergement-cards {
-    grid-column: 1;
-    grid-row: 1;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 750px;
-  }
-  .side-bar {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .see-more {
-    margin-top: -30px;
-  }
-  .card-1 {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .card-2 {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .card-3 {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .card-4 {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .card-5 {
-    grid-column: 1;
-    grid-row: 3;
-  }
-  .card-6 {
-    grid-column: 2;
-    grid-row: 3;
-  }
-  .cards img {
-    object-fit: cover;
-    width: 100%;
-    height: 119px;
-    border-radius: 16px 16px 0 0;
-  }
-  .aside-cards {
-    grid-template-columns: 1fr;
-    height: 600px;
-  }
-  .populaire-title i {
-    font-size: 24px;
-  }
-  .side-bar h2 {
-    font-size: 22px;
-  }
-  .card-7 {
-    grid-row: 1;
-  }
-  .card-8 {
-    grid-row: 2;
-  }
-  .card-9 {
-    grid-row: 3;
-  }
-  .aside-card img {
-    object-fit: cover;
-    width: 190px;
-    height: 139px;
-    border-radius: 16px 0 0 16px;
-  }
-  .activities {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 32px;
-    row-gap: 32px;
-  }
-  .activity-card-1 {
-    grid-column: 1;
-    grid-row: 1;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #0000002e;
-    transition: 0.2s;
-  }
-  .activity-card-2 {
-    grid-column: 2;
-    grid-row: 1;
-    border-radius: 20px;
-  }
-  .activity-card-3 {
-    grid-column: 1;
-    grid-row: 2;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #0000002e;
-  }
-  .activity-card-4 {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .activity-card-1 img,
-  .activity-card-3 img {
-    object-fit: cover;
-    width: 100%;
-    height: 378.6px;
-    border-radius: 20px 20px 0 0;
-  }
-  .activity-card-2,
-  .activity-card-4 {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-  .activity-card-2 .cards-fraction img {
-    object-fit: cover;
-    width: 100%;
-    height: 179.53px;
-    border-radius: 20px 20px 0 0;
-  }
-  .cards-fraction-2 img {
-    object-fit: cover;
-    width: 100%;
-    height: 109.1px;
-    border-radius: 20px 20px 0 0;
-  }
-  .activity-card-4 img {
-    object-fit: cover;
-    width: 100%;
-    height: 196px;
-    border-radius: 20px 20px 0 0;
-  }
-  .cards-fraction-4 img {
-    object-fit: cover;
-    width: 100%;
-    height: 159.2px;
-    border-radius: 20px 20px 0 0;
-  }
-  footer {
-    margin-top: 40px;
-    display: flex;
-    background: #f2f2f2;
-    padding: 45px;
-    gap: 90px;
-  }
-} */
 @media screen and (max-width: 991px) and (min-width: 768px) {
-  html {
-    max-width: 991px;
-    margin: auto;
-  }
-  body {
-    max-width: 992px;
-    min-width: 768px;
-  }
   .hotels {
     display: block;
   }
   .hebergement-cards {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 750px;
+    width: 100%;
+  }
+  .aside-card img {
+    height: 139px;
+  }
+  .activities {
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   footer {
     width: 100%;
@@ -629,13 +433,6 @@ ul {
 }
 
 @media screen and (max-width: 767px) {
-  html {
-    max-width: 375px;
-    margin: auto;
-  }
-  body {
-    max-width: 375px;
-  }
   .logo {
     text-align: center;
     margin-top: 20px;
@@ -676,14 +473,7 @@ ul {
   form {
     margin-top: 30px;
   }
-  .search-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    border-top: 1px var(--secondary) solid;
-    border-bottom: 1px var(--secondary) solid;
-    border-radius: 20px;
-  }
+
   .search span {
     display: none;
   }
@@ -716,11 +506,20 @@ ul {
     display: block;
     margin: 0;
   }
-  .hebergement {
+  .hebergement__section {
     margin-bottom: 10px;
-    height: 1340px;
+    flex: 100%;
     order: 2;
     background-color: white;
+  }
+  .hebergement__cards {
+    display: block;
+    margin: 0px 15px;
+  }
+  .cards {
+    width: 767px;
+    max-width: 100%;
+    margin-bottom: 32px;
   }
   .side-bar {
     background-color: #f2f2f2;
@@ -728,34 +527,10 @@ ul {
     border-radius: 0px;
   }
 
-  .hebergement-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 10px;
-    margin: 0 15px;
-  }
-
   .see-more {
     margin-top: 10px;
   }
-  .card-1 {
-    grid-row: 1;
-  }
-  .card-2 {
-    grid-row: 2;
-  }
-  .card-3 {
-    grid-row: 3;
-  }
-  .card-4 {
-    grid-row: 4;
-  }
-  .card-5 {
-    grid-row: 5;
-  }
-  .card-6 {
-    grid-row: 6;
-  }
+
   .cards img {
     width: 100%;
     height: 119px;
@@ -778,7 +553,7 @@ ul {
   }
   .aside-card img {
     object-fit: cover;
-    width: 132px;
+    width: 40%;
     height: 139px;
     border-radius: 16px 0 0 16px;
   }
@@ -796,12 +571,11 @@ ul {
   }
   #activity {
     margin-left: 0px;
-    margin-top: 100px;
   }
 
   .activity-card-1 img,
   .activity-card-3 img {
-    width: 335px;
+    width: 100%;
     height: 120px;
   }
   .activity-card-2,
@@ -811,13 +585,13 @@ ul {
     gap: 20px;
   }
   .activity-card-2 .cards-fraction img {
-    width: 335px;
+    width: 100%;
     height: 120px;
   }
   .cards-fraction-2 img,
   .activity-card-4 img,
   .cards-fraction-4 img {
-    width: 335px;
+    width: 100%;
     height: 120px;
   }
   footer {
